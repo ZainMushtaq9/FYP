@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #3498db, #8e44ad);
+    color: white;
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Allow multiple rows */
+    justify-content: center;
+    align-items: flex-start; /* Align items from top */
+    min-height: 100vh; /* Ensure full height */
+    padding: 20px;
+    gap: 20px; /* Adds spacing between profiles */
+}
+
+.profile {
+    width: 45%;
+    min-width: 320px; /* Prevents too small cards */
+    max-width: 600px; /* Keeps layout balanced */
+    margin: 20px;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #f1c40f;
+    font-weight: bold;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #e67e22;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack profiles vertically */
+    }
+    .profile {
+        width: 90%; /* Make it take full width */
+    }
+}
